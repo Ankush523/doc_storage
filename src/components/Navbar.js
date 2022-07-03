@@ -5,7 +5,7 @@ const Navbar = () => {
     return ( 
         <div className='flex flex-row  w-[100vw] h-[fit-content] p-[20px] shadow-xl justify-between '>
         <label className='font-bold  text-purple-700 p-3 text-2xl rounded-full '>
-            Loan
+            UploadSys
         </label>
         <ConnectButton/>
     </div>

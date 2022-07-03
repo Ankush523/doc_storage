@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import GetContract from '../hooks/GetContract';
 const UploadList = () => {
     const contract = GetContract();
+
     const[lists,setList] = useState([]);
+    const[sharebook,setSharebook] = useState('');
+
 
     const getList =async() =>{
         var len = await contract.receiveid();
@@ -15,12 +18,19 @@ const UploadList = () => {
             setList((lists) => [...lists,list])
         }
     }
+
+   
+
     return (
         <div>
         <button onClick={getList}>GetList</button>
         {
             Object.keys(lists).map((list,index)=>(
-                <p>{lists[index].hash}</p>
+                <div>
+                <label>{lists[index].hash}</label>
+                <input onChange={e => setSharebook(e.target.value)} placeholder='Enter Address'/>
+                <button >Submit Request</button>
+                </div>
             ))
         }
         </div>
