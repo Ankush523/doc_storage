@@ -19,7 +19,14 @@ const UploadList = () => {
         }
     }
 
-   
+    const Chutiya=async(key)=>{
+        await contract.send(key,sharebook)
+    }
+
+    const[getbook,setGetbook] = useState('');
+    const getting = async() => {
+    await contract.send(getbook);
+    }
 
     return (
         <div>
@@ -29,7 +36,7 @@ const UploadList = () => {
                 <div>
                 <label>{lists[index].hash}</label>
                 <input onChange={e => setSharebook(e.target.value)} placeholder='Enter Address'/>
-                <button >Submit Request</button>
+                <button onClick={()=>Chutiya(index)}>Submit Request</button>
                 </div>
             ))
         }

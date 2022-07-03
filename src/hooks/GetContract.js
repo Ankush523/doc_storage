@@ -7,7 +7,7 @@ const GetContract = () => {
     const{data:signer}=useSigner();
 
     const contract = useContract({
-        addressOrName: '0xb8b96F52BC854206d6538B2Ff1E6a6493FeEa292',
+        addressOrName: '0x520992B6Ef731Bf0aF421A06a9e8256CA104f2F7',
         contractInterface: FileABI,
         signerOrProvider: signer,
       })
