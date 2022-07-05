@@ -9,8 +9,13 @@ const Upload = () => {
     }
     return (
         <div>
-            <input onChange={e => setUpbook(e.target.value)}/>
-            <button onClick={addbook}>Enter</button>
+            <br/>
+            <br/>
+            <label className='text-[white] text-[20px]'>File name : </label>
+            <input className='rounded-md w-[300px] h-[40px]' onChange={e => setUpbook(e.target.value)}/>
+            <br/>
+            <br/>
+            <button className='text-white text-[20px] pl-20' onClick={addbook}>Enter</button>
         </div>
     );
 }
